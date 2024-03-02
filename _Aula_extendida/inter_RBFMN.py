@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-datos = np.loadtxt('dat_log.txt', encoding='utf-8')  # Reemplaza 'utf-8' con la codificación real del archivo
+datos = np.loadtxt('_Aula_extendida\dat_log.txt', encoding='utf-8')  # Reemplaza 'utf-8' con la codificación real del archivo
 
 
 #funcion de evaluacion de FBR multicuadrica

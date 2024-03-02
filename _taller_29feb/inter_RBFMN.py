@@ -53,14 +53,22 @@ def rbf_interpolacion(x,y):
     print("parametro de forma: ", c)
     print("error RMS de la aproximacion: ", Err)
 
-    #graficas
-    plt.figure()
-    plt.plot(x, np.log(x), label = 'Funcion dada')
-    plt.plot(x, yinterp, label = 'Interpolacion RBF')
-    plt.plot(xdat,ydat , 'or' , label = 'datos')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.grid(True)
-    plt.title('interpolacion con funciones de base radial')
+    # #graficas
+    # plt.figure()
+    # plt.plot(x, np.log(x), label = 'Funcion dada')
+    # plt.plot(x, yinterp, label = 'Interpolacion RBF')
+    # plt.plot(xdat,ydat , 'or' , label = 'datos')
+    # plt.xlabel('x')
+    # plt.ylabel('y')
+    # plt.grid(True)
+    # plt.title('interpolacion con funciones de base radial')
 
-    plt.show()
+
+
+    # plt.show()
+    funcionx = x
+    funciony = np.log(x)
+    interx = x
+    intery = yinterp
+
+    return funcionx,funciony,interx,intery
