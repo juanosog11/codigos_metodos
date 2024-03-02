@@ -53,7 +53,8 @@ def interpolacion(x,y):
   print (coeficientes)
   print ('polinomio: ')
   print (polinomio)
-
+  
+  vector_x=np.array([-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2])
   #crearemos una grafica
   plt.plot(xi,fi,'o', label='puntos')
   plt.plot(pxi,pfi, label='polinomio') #Trazamos la linea de los puntos

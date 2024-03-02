@@ -52,7 +52,7 @@ def rbf_interpolacion(x,y):
     Err = np.sqrt(np.sum((yinterp - np.log(x))**2)/len(yinterp) )
     print("parametro de forma: ", c)
     print("error RMS de la aproximacion: ", Err)
-
+    
     # #graficas
     plt.figure()
     plt.plot(x, np.log(x), label = 'Funcion dada')
