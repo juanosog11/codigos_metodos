@@ -52,20 +52,25 @@ def rbf_interpolacion(x,y):
     Err = np.sqrt(np.sum((yinterp - np.log(x))**2)/len(yinterp) )
     print("parametro de forma: ", c)
     print("error RMS de la aproximacion: ", Err)
-
+    
     # #graficas
-    # plt.figure()
-    # plt.plot(x, np.log(x), label = 'Funcion dada')
-    # plt.plot(x, yinterp, label = 'Interpolacion RBF')
-    # plt.plot(xdat,ydat , 'or' , label = 'datos')
-    # plt.xlabel('x')
-    # plt.ylabel('y')
-    # plt.grid(True)
-    # plt.title('interpolacion con funciones de base radial')
+    plt.figure()
+    plt.plot(x, np.log(x), label = 'Funcion dada')
+    plt.plot(x, yinterp, label = 'Interpolacion RBF')
+    plt.plot(xdat,ydat , 'or' , label = 'datos')
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.grid(True)
+    plt.title('interpolacion con funciones de base radial')
+    x_eval = np.array([1.5, 5.7])
+    y_eval = rbfsuperposit(x_eval, coef, xdat, c)
+    print("Evaluación en x =", x_eval[0], ":", y_eval[0])
+    print("Evaluación en x =", x_eval[1], ":", y_eval[1])
 
 
 
-    # plt.show()
+
+    plt.show()
     funcionx = x
     funciony = np.log(x)
     interx = x

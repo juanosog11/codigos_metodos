@@ -48,18 +48,26 @@ def interpolacion(x,y):
 
   #Salida
   print ('Matriz')
-  print ('D')
+  print (D[i,j])
   print ('Coeficientes:')
   print (coeficientes)
   print ('polinomio: ')
   print (polinomio)
-
+  
+  vector_x=np.array([-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2])
   #crearemos una grafica
-
+  plt.plot(xi,fi,'o', label='puntos')
+  plt.plot(pxi,pfi, label='polinomio') #Trazamos la linea de los puntos
+  plt.legend() #Mostrar todas las etiquetas
+  plt.xlabel('xi') #Añadimos una etiqueta
+  plt.ylabel('fi') #Añadimos una etiqueta
+  plt.title('Polinomio de Interpolación')#Añadimos un titulo
+  plt.show() #Para ver la gráfica
 
   puntosx = xi
   puntosy = fi
   polinomiox = pxi
   polinomioy = pfi
-
+  print("X:1.5, Y:",px(1.5))
+  print("X:5.7, Y: ",px(5.7))
   return puntosx,puntosy,polinomiox,polinomioy
