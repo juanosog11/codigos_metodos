@@ -5,6 +5,7 @@ import interpolacion_importante as inti
 import inter_RBFMN as rbf
 import interpolacion_importante_original as init_original
 import inter_RBFMN_Origina as rbf_original
+import punto5 as punto5
 
 datos= np.loadtxt('_taller_29feb\datos_importantes.txt')
 terminar = 0
@@ -46,7 +47,8 @@ while(terminar == 0):
         plt.legend() #Mostrar todas las etiquetas
         plt.title('interpolacion con funciones de base radial')
         plt.show() #Para ver la gráfica
-
+    elif(hacer == 4):
+        punto5.punto5()
     elif(hacer == 5):
         terminar = 1
 
