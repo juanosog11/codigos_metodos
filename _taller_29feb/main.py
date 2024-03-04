@@ -52,34 +52,3 @@ while(terminar == 0):
     elif(hacer == 5):
         terminar = 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# plt.xlabel('xi') #Añadimos una etiqueta
-# plt.ylabel('fi') #Añadimos una etiqueta
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
