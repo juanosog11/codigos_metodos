@@ -7,7 +7,7 @@ import inter_RBFMN as rbf
 
 
 
-datos= np.loadtxt('./datos_importantes.txt')
+datos= np.loadtxt('_taller_29feb\datos_importantes.txt')
 
 xi = datos[:,0]
 fi = datos[:,1]
@@ -74,20 +74,7 @@ print(np.log(x))
 Err = np.sqrt(np.sum((polinomioy_inti - np.log(x))**2)/len(polinomioy_inti))
 print("error de nuestro polinomio", Err)
 
-funcionx,funciony,interx,intery = rbf.rbf_interpolacion(xi,fi)
-
-
-plt.plot(funcionx, funciony, label = 'Funcion dada')
-plt.plot(interx,interx, label = 'Interpolacion RBF')
-plt.plot(xi,fi , 'or' , label = 'datos')
-plt.plot(puntosx_inti,puntosy_inti,'o', label='puntos')
-plt.plot(polinomiox_inti,polinomioy_inti, label='polinomio') #Trazamos la linea de los puntos
-plt.xlabel('x')
-plt.ylabel('y')
-plt.grid(True)
-plt.legend() #Mostrar todas las etiquetas
-# plt.title('interpolacion con funciones de base radial')
 
 
 
-plt.show() #Para ver la gráfica
+

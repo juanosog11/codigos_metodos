@@ -56,13 +56,13 @@ def interpolacion(x,y):
   
   vector_x=np.array([-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2])
   #crearemos una grafica
-  plt.plot(xi,fi,'o', label='puntos')
-  plt.plot(pxi,pfi, label='polinomio') #Trazamos la linea de los puntos
-  plt.legend() #Mostrar todas las etiquetas
-  plt.xlabel('xi') #Añadimos una etiqueta
-  plt.ylabel('fi') #Añadimos una etiqueta
-  plt.title('Polinomio de Interpolación')#Añadimos un titulo
-  plt.show() #Para ver la gráfica
+  # plt.plot(xi,fi,'o', label='puntos')
+  # plt.plot(pxi,pfi, label='polinomio') #Trazamos la linea de los puntos
+  # plt.legend() #Mostrar todas las etiquetas
+  # plt.xlabel('xi') #Añadimos una etiqueta
+  # plt.ylabel('fi') #Añadimos una etiqueta
+  # plt.title('Polinomio de Interpolación')#Añadimos un titulo
+  # plt.show() #Para ver la gráfica
 
   puntosx = xi
   puntosy = fi
