@@ -1,6 +1,6 @@
 import numpy as np
-import _taller_29feb.interpolacion_importante_coseno as inti
-import inter_RBFMN as rbf
+import interpolacion_importante_coseno as inti
+import inter_RBFMN_coseno as rbf
 import matplotlib.pyplot as plt
 
 def punto5():
