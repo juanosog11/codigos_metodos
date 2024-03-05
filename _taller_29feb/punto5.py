@@ -9,7 +9,7 @@ def punto5():
     puntosy = (np.cos(puntosx))**10
     x_selected = np.arange(-2,2.05,0.05)
 
-        # Calcular y = f(x)
+    # Calcular y = f(x)
     y_selected = (np.cos(x_selected))**10
 
     print("Puntos seleccionados sobre la función:", "puntos en x: ", x_selected)

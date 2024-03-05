@@ -62,10 +62,10 @@ def rbf_interpolacion(x,y):
     # plt.ylabel('y')
     # plt.grid(True)
     # plt.title('interpolacion con funciones de base radial')
-    x_eval = np.array([1.5, 5.7])
-    y_eval = rbfsuperposit(x_eval, coef, xdat, c)
-    print("Evaluación en x =", x_eval[0], ":", y_eval[0])
-    print("Evaluación en x =", x_eval[1], ":", y_eval[1])
+    # x_eval = np.array([1.5, 5.7])
+    # y_eval = rbfsuperposit(x_eval, coef, xdat, c)
+    # print("Evaluación en x =", x_eval[0], ":", y_eval[0])
+    # print("Evaluación en x =", x_eval[1], ":", y_eval[1])
 
 
 
