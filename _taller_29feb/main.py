@@ -1,4 +1,5 @@
 import numpy as np
+4
 import interpolacion_importante_original as init_original
 import inter_RBFMN_Origina as rbf_original
 import punto5 as punto5

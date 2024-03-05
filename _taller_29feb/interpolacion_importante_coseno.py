@@ -47,12 +47,12 @@ def interpolacion(x,y):
 
 
   #Salida
-  print ('Matriz')
-  print (D[i,j])
-  print ('Coeficientes:')
-  print (coeficientes)
-  print ('polinomio: ')
-  print (polinomio)
+  # print ('Matriz')
+  # print (D[i,j])
+  # print ('Coeficientes:')
+  # print (coeficientes)
+  # print ('polinomio: ')
+  # print (polinomio)
   
   vector_x=np.array([-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2])
   #crearemos una grafica
@@ -68,8 +68,8 @@ def interpolacion(x,y):
   puntosy = fi
   polinomiox = pxi
   polinomioy = pfi
-  # print("X:1.5, Y:",px(1.5))
-  # print("X:5.7, Y: ",px(5.7))
+  print("Polinomica X:1.5, Y:",px(1.5))
+  print("Polinomica X:5.7, Y: ",px(5.7))
 
 
 
@@ -81,6 +81,7 @@ def interpolacion(x,y):
   x = np.arange(inicio, fin + paso, paso)
 
 
-  err =  np.sqrt(np.sum((polinomioy - np.log(x))**2)/len(polinomioy))
+  err = np.sqrt(np.sum((np.abs(polinomioy - (np.cos(x))**10))/len(polinomioy)))
+
 
   return puntosx,puntosy,polinomiox,polinomioy,err

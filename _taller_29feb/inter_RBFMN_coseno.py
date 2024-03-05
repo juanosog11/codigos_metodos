@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 
-def rbf_interpolacion(x,y):
+def rbf_interpolacion(x,y1):
 
     #funcion de evaluacion de FBR multicuadrica
     def rbffuncion(xev,xdat,c):
@@ -34,7 +34,7 @@ def rbf_interpolacion(x,y):
     #informacion de entrada 
 
     xdat = x
-    ydat = y
+    ydat = y1
     c=0.4 # Parametro de forma
 
     #matriz de interpolacion
@@ -49,9 +49,9 @@ def rbf_interpolacion(x,y):
 
 
     #calculo del error RMS entre la interpolacion y la funcion dada
-    Err = np.sqrt(np.sum((yinterp - np.log(x))**2)/len(yinterp) )
-    print("parametro de forma: ", c)
-    print("error RMS de la aproximacion: ", Err)
+    Err = np.sqrt(np.sum((yinterp - (np.cos(x))**10)**2)/len(yinterp) )
+    # print("parametro de forma: ", c)
+    # print("error RMS de la aproximacion: ", Err)
     
     # #graficas
     # plt.figure()
@@ -62,17 +62,17 @@ def rbf_interpolacion(x,y):
     # plt.ylabel('y')
     # plt.grid(True)
     # plt.title('interpolacion con funciones de base radial')
-    # x_eval = np.array([1.5, 5.7])
-    # y_eval = rbfsuperposit(x_eval, coef, xdat, c)
-    # print("Evaluación en x =", x_eval[0], ":", y_eval[0])
-    # print("Evaluación en x =", x_eval[1], ":", y_eval[1])
+    x_eval = np.array([1.5, 5.7])
+    y_eval = rbfsuperposit(x_eval, coef, xdat, c)
+    print("RBFMN Evaluación en x =", x_eval[0], ":", y_eval[0])
+    print("RBFMN Evaluación en x =", x_eval[1], ":", y_eval[1])
 
 
 
 
     plt.show()
     funcionx = x
-    funciony = np.log(x)
+    funciony = (np.cos(x))**10
     interx = x
     intery = yinterp
     error = Err
