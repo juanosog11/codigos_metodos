@@ -1,8 +1,4 @@
 import numpy as np
-import sympy as sym #Para crear la expresion del polinomio
-import matplotlib.pyplot as plt
-import interpolacion_importante_coseno as inti
-import inter_RBFMN as rbf
 import interpolacion_importante_original as init_original
 import inter_RBFMN_Origina as rbf_original
 import punto5 as punto5
