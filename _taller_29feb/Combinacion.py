@@ -37,11 +37,26 @@ def combinacion(x1,y):
     pxi = np.linspace(a,b,muestras) #Serie de puntos muestreados
     pfi = px(pxi) #puntos de la función,usando la forma numerica del polinomio
 
+
+    puntosx = xi
+    puntosy = fi
+    polinomiox = pxi
+    polinomioy = pfi
+
+    inicio = 0.4
+    fin = xi[-1]+1
+    cantidad_numeros_deseados = len(polinomiox)
+    paso = (fin - inicio) / (cantidad_numeros_deseados - 1)
+    x = np.arange(inicio, fin + paso, paso)
+
+
+    err =  np.sqrt(np.sum((polinomioy - np.log(x))**2)/len(polinomioy))
+
     #Información de Entrada
     
     xdat = x1
     ydat = y
-    c = 50
+    c = 40
 
     #Construimos la función para evaluar funciones de base radial, multicuadrica
     def rbffunction(xev,xdat,c):
@@ -79,6 +94,7 @@ def combinacion(x1,y):
     Err = np.sqrt(np.sum((yinterp - np.log(x))**2)/len(yinterp)) #la raiz cuadrada dela sumatoria de los valores tanto aproximados como verdaderos
     print('Parámetro de forma: ', c) # Establecer el valor del parametro
     print('Error RMS de la aproximación:' , Err)
+    print('Error polinomio de la aproximación:' , err)
 
     #Halla el valor de cada interpolación en 𝑥 = 1.5 y 𝑥 = 5.7.
     print('Valor de la interpolación en x=1.5:', px(1.5))
