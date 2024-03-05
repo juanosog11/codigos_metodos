@@ -54,8 +54,8 @@ def interpolacion_oroginal(x,y):
   print (coeficientes)
   print ('polinomio: ')
   print (polinomio)
-  print (px(1.5))
-  print (px(5.7))
+  print ("evaluado en 1.5: ",px(1.5))
+  print ("evaluado en 5,7: ",px(5.7))
   #crearemos una grafica
   plt.plot(xi,fi,'o', label='puntos')
   plt.plot(pxi,pfi, label='polinomio') #Trazamos la linea de los puntos

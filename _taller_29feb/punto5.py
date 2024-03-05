@@ -1,5 +1,5 @@
 import numpy as np
-import interpolacion_importante as inti
+import _taller_29feb.interpolacion_importante_coseno as inti
 import inter_RBFMN as rbf
 import matplotlib.pyplot as plt
 
