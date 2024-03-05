@@ -68,6 +68,19 @@ def interpolacion(x,y):
   puntosy = fi
   polinomiox = pxi
   polinomioy = pfi
-  print("X:1.5, Y:",px(1.5))
-  print("X:5.7, Y: ",px(5.7))
-  return puntosx,puntosy,polinomiox,polinomioy
+  # print("X:1.5, Y:",px(1.5))
+  # print("X:5.7, Y: ",px(5.7))
+
+
+
+
+  inicio = 0.4
+  fin = xi[-1]+1
+  cantidad_numeros_deseados = len(polinomiox)
+  paso = (fin - inicio) / (cantidad_numeros_deseados - 1)
+  x = np.arange(inicio, fin + paso, paso)
+
+
+  err =  np.sqrt(np.sum((polinomioy - np.log(x))**2)/len(polinomioy))
+
+  return puntosx,puntosy,polinomiox,polinomioy,err

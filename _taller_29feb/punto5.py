@@ -16,11 +16,18 @@ def punto5():
     print("puntos en y: ",y_selected)
 
 
-        # Llamar a la función de interpolación polinómica
-    puntosx_inti, puntosy_inti, polinomiox_, polinomioy_ = inti.interpolacion(puntosx, puntosy)
+    puntosx_inti, puntosy_inti, polinomiox_, polinomioy_, Err_poli = inti.interpolacion(puntosx, puntosy)
 
-        # Llamar a la función de interpolación con funciones de base radial (RBF)
-    funcionx, funciony, interx, intery = rbf.rbf_interpolacion(x_selected, y_selected)
+    # Llamar a la función de interpolación con funciones de base radial (RBF)
+    funcionx, funciony, interx, intery, error = rbf.rbf_interpolacion(x_selected, y_selected)
+
+    Err = np.sqrt(np.sum((y_selected - np.log(x_selected))**2)/len(y_selected) )
+    
+    
+    
+    print("error coseno: " ,Err)
+    print("error funcion radial: ", error)
+    print("error de nuestro polinomio", Err_poli)
 
 
         # Graficar los resultados de la interpolación con funciones de base radial (RBF)

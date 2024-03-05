@@ -75,5 +75,6 @@ def rbf_interpolacion(x,y):
     funciony = np.log(x)
     interx = x
     intery = yinterp
+    error = Err
 
-    return funcionx,funciony,interx,intery
+    return funcionx,funciony,interx,intery,error
